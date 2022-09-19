@@ -12,22 +12,26 @@ import java.util.Scanner;
  **/
 public class app2 {
 
-    private int age;
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
     public String getStatus(String age){
+          int age1 = Integer.getInteger(age);
+          if (age1 >= 13) {
+
+              return "Person is a kid" ;
+          }
+          else if (age1 > 13 && age1 <= 19) {
+
+              return "Person is a teen";
+          }
+          else if(age1 > 19){
+
+              return "Person is a adult" ;
+          }
+          else {
+              return "Not a valid age";
+          }
 
 
 
-
-        return "age";
     }
 
 
@@ -36,6 +40,10 @@ public class app2 {
         System.out.println("Enter age of person " );
         String age = obj1.nextLine();
         System.out.println("Person age is "+age);
+
+        app2 obj2 = new app2();
+        System.out.println((obj2.getStatus(age)));
+
 
 
     }
