@@ -12,7 +12,7 @@ import java.util.Scanner;
  **/
 public class app2 {
 
-    int ageOfPerson;
+    static int age ;
 
     public String getStatus(int age) {
 
@@ -43,12 +43,12 @@ public class app2 {
 
         Scanner obj1 = new Scanner(System.in); // Create Scanner object
         System.out.println("Enter age of person ");
-        String age = obj1.next();
-        int age1 = Integer.parseInt(age);
-        System.out.println("Person age is " + age1);
+        //String age1 = obj1.next(); // merging with second line
+        app2.age = Integer.parseInt(obj1.next());
+        System.out.println("Person age is " + age);
 
         app2 obj2 = new app2();
-        System.out.println("Person is a " + obj2.getStatus(age1));
+        System.out.println("Person is a " + obj2.getStatus(age));
 
 
     }
